@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #00FF66;
+    --secondary-color: #FF007F; 
+    --accent-color: #0A0A0A; 
+    --background-color: #1f0372; 
+}
+
+.loginsignup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('../assets/background-sign.png');
+    background-color: var(--background-color); 
+    background-size: cover; 
+}
+
+.loginsignup-container {
+    background-color: var(--accent-color); 
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 60px; 
+    width: 500px; 
+    height: 600px; 
+    max-width: 90%;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+}
+
+.loginsignup-fields input {
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    padding: 12px 15px; 
+    border-radius: 8px;
+    font-size: 16px; 
+    outline: none;
+}
+
+.loginsignup-fields input:focus {
+    border: 2px solid var(--primary-color); 
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color); 
+}
+
+.loginsignup-login {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff; 
+}
+
+.loginsignup-login span {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loginsignup-agree {
+    margin-top: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+}
+
+.loginsignup-agree input {
+    margin-right: 8px;
+}
+
+.loginsignup-agree p {
+    color: #bbb; 
+}
+
+@media (max-width: 600px) {
+    .loginsignup-container {
+        padding: 30px;
+        width: 90%; 
+        height: auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 12px; 
+    }
+}

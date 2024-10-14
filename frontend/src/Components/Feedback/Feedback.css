@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #CB6328;  
+  --secondary-color: #FF1F4F;  
+  --accent-color: #18164E;     
+  --background-color: #0A0A0A;  
+  --text-color: #FDF2D8;         
+}
+
+.feedback {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    border: 3px solid var(--primary-color);   
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 31, 79, 0.5);  
+    border-radius: 50%;
+    z-index: 0;
+    animation: neonPulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes neonPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.feedback h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    z-index: 1;
+    position: relative;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);  
+}
+
+.feedback .users, 
+.feedback .rating, 
+.feedback .support {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    position: relative;
+    border: 2px solid var(--primary-color);  
+}
+
+.feedback .users:hover, 
+.feedback .rating:hover, 
+.feedback .support:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 31, 79, 0.7);  
+}
+
+.feedback h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+.feedback p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .feedback h1 {
+        font-size: 2.5rem;
+    }
+
+    .feedback h3 {
+        font-size: 1.6rem;
+    }
+
+    .feedback p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback h1 {
+        font-size: 2rem;
+    }
+
+    .feedback h3 {
+        font-size: 1.4rem;
+    }
+
+    .feedback p {
+        font-size: 0.9rem;
+    }
+}

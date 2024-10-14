@@ -1,0 +1,103 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.search-form {
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.search-bar:focus {
+  border-color: var(--primary-color); 
+}
+.submit-button {
+  padding: 10px 15px;
+  background-color: var(--primary-color); 
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+.submit-button:hover {
+  background-color: var(--secondary-color); 
+}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card h2 {
+  font-size: 1.5rem;
+  color: #73d814;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666; 
+  margin-bottom: 15px;
+}
+.card strong {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+.buy-button {
+  padding: 10px 15px;
+  background-color: var(--primary-color); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold; 
+}
+.buy-button:hover {
+  background-color: var(--secondary-color); 
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px; 
+}
+
+.card::after {
+  content: "Virtual Tram Card"; 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--primary-color); 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #CB6328;   
+    --secondary-color: #FF1F4F; 
+    --accent-color: #18164E;    
+    --background-image: url('../assets/background.jpg'); 
+}
+
+.services {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: #ffffff;
+}
+
+.branch-row {
+    margin-bottom: 30px;
+}
+
+.branch-row h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--primary-color); 
+}
+
+.subject-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+.card {
+    width: 30%;
+    padding: 15px;
+    background: url('../assets/background.jpg') no-repeat center center; 
+    background-size: cover; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.subject-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subject-card a {
+    color: var(--primary-color); 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.subject-card a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.subject-card img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.purchase-button {
+    background-color: var(--primary-color);
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.purchase-button:hover {
+    background-color: var(--secondary-color); 
+}
+
+@media (max-width: 768px) {
+    .subject-card {
+        width: 100%; 
+    }
+    
+    .subject-row {
+        gap: 10px;
+    }
+}
+
+

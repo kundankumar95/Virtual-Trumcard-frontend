@@ -1,0 +1,27 @@
+/* body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8d7da;
+} */
+
+.cancel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center; 
+}
+
+.cancel-message {
+  color: #721c24; 
+  font-size: 24px; 
+  font-weight: bold;
+  padding: 20px; 
+  border: 2px solid #f5c6cb; 
+  border-radius: 8px; 
+  background-color: #f5c6cb; 
+}
