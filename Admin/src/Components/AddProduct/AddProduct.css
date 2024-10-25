@@ -1,0 +1,102 @@
+.addproduct {
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    max-width: 800px;
+    padding: 40px 50px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.addproduct-itemfield {
+    width: 100%;
+    color: #495057;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.addproduct-itemfield input, 
+.addproduct-itemfield select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ced4da;
+    outline: none;
+    color: #212529;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.addproduct-itemfield input:focus, 
+.addproduct-itemfield select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.addproduct-price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+.add-product-selector {
+    padding: 12px;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-product-selector:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.addproduct-thumbnail {
+    display: block;
+    margin: 10px 0;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.addproduct-btn {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background: #28a745;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.addproduct-btn:hover {
+    background: #218838;
+}
+
+@media (max-width: 768px) {
+    .addproduct-price {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .addproduct-thumbnail {
+        height: 80px;
+        width: 80px;
+    }
+}

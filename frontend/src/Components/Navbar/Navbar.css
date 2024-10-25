@@ -7,11 +7,13 @@
 }
 
 .navbar {
+    margin-bottom: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    /* background: rgba(10, 56, 10, 0.726); */
+     background: rgba(46, 156, 46, 0.726);
     color: var(--text-color); 
     position: fixed;
     top: 0;
@@ -40,9 +42,9 @@
     font-size: 1rem; 
 }
 
-.navbar:hover {
+/* .navbar:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-}
+} */
 
 .navbar-links {
     list-style: none;
@@ -76,23 +78,23 @@
 .signup-button {
     padding: 0.5rem 1rem;
     margin-right: 50px;
-    background: linear-gradient(135deg, var(--primary-color), var(--background-color));
-    color: var(--text-color); 
+    /* background: linear-gradient(135deg, var(--primary-color), var(--background-color)); */
+    /* color: var(--text-color);  */
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* transition: background-color 0.3s ease, transform 0.2s ease; */
     white-space: nowrap;
     position: relative;
     transform: translateX(0);
 }
 
-.signup-button:hover {
+/* .signup-button:hover {
     background-color: var(--background-color);
     color: var(--primary-color);
     transform: translateX(-5%); 
     box-shadow: 0 0 10px var(--secondary-color);
-}
+} */
 
 .hamburger {
     display: none; 
@@ -177,7 +179,7 @@
         gap: 2rem;
     }
     
-    .navbar-links a {
-        font-size: 1rem;
-    }
+    /* .navbar-links a {
+        font-size: 1rem;
+    } */
 }

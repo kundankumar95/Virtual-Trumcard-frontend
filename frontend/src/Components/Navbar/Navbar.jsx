@@ -13,8 +13,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="GameZone Logo" style={{ height: '50px', width: 'auto' }} /> {/* Adjust height as needed */}
-        <p style={{ marginTop: '5px', color: '#ffffff', fontSize: '1rem' }}>BeingSarangi</p> {/* Add styling as needed */}
+        <img src={logo} alt="GameZone Logo" style={{ height: '50px', width: 'auto' }} /> 
+        <p style={{ marginTop: '5px', color: '#ffffff', fontSize: '1rem' }}>BeingSarangi</p> 
       </div>
       <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li><a href="/">Home</a></li>

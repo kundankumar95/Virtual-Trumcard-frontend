@@ -1,0 +1,26 @@
+.item-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.item-price {
+  font-size: 1.1em;
+  color: #28a745; /* Green color for price */
+  margin-bottom: 10px;
+}

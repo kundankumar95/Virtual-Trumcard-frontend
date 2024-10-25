@@ -1,35 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cards.css'; 
-import image2 from '../assets/image2.png';
-import image3 from '../assets/image3.png';
+import Item from './Items';
 
 const Cards = () => {
   const navigate = useNavigate();
-  
-  const cardData = [
-    { id: 1, image: image2, title: 'CardTitle1', description: 'This is a description for Card 1.', price: 1 },
-    { id: 2, image: image2, title: 'Card Title 2', description: 'This is a description for Card 2.', price: 29.99 },
-    { id: 3, image: image3, title: 'Card Title 3', description: 'This is a description for Card 3.', price: 39.99 },
-    { id: 4, image: image2, title: 'Card Title 1', description: 'This is a description for Card 1.', price: 19.99 },
-    { id: 5, image: image2, title: 'Card Title 2', description: 'This is a description for Card 2.', price: 29.99 },
-    { id: 6, image: image3, title: 'Card Title 3', description: 'This is a description for Card 3.', price: 39.99 },
-    { id: 7, image: image2, title: 'Card Title 1', description: 'This is a description for Card 1.', price: 19.99 },
-    { id: 8, image: image2, title: 'Card Title 2', description: 'This is a description for Card 2.', price: 29.99 },
-  ];
-
+  const [newCard, setNewCard] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [error, setError] = useState(null);
 
-  const filteredCards = cardData.filter(card =>
-    card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    card.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    // Fetch latest 20 cards or search results based on searchTerm
+    const fetchCards = () => {
+      const url = searchTerm 
+        ? `http://localhost:4000/newCards?search=${encodeURIComponent(searchTerm)}` 
+        : 'http://localhost:4000/newCards';
+      
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data); // Log the response data
+          setNewCard(data);
+        })
+        .catch((error) => {
+          console.error('Error fetching cards:', error);
+          setError('Failed to fetch cards. Please try again later.');
+        });
+    };
+
+    fetchCards();
+  }, [searchTerm]); // Re-run the effect if searchTerm changes
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value.trim());
   };
 
-   const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Search submitted for:', searchTerm);
   };
@@ -40,7 +51,8 @@ const Cards = () => {
 
   return (
     <>
-       <form onSubmit={handleSubmit} className="search-form">
+      {/* Search form */}
+      <form onSubmit={handleSubmit} className="search-form">
         <input 
           type="text" 
           className="search-bar" 
@@ -51,18 +63,17 @@ const Cards = () => {
         <button type="submit" className="submit-button">Submit</button>
       </form>
 
+      {error && <p className="error-message">{error}</p>}
+
+      {/* Display cards */}
       <div className="cards-container">
-        {filteredCards.length > 0 ? (
-          filteredCards.map((card) => (
-            <div key={card.id} className="card">
-              <img src={card.image} alt={card.title} />
-              {/* <h2>{card.title}</h2> */}
-              <p>{card.description}</p>
-              <strong>${card.price.toFixed(2)}</strong>
+        {newCard.length > 0 ? (
+          newCard.map((card) => (
+            <Item key={card.id} id={card.id} image={card.image} price={card.price}>
               <button className="buy-button" onClick={() => handlePurchase(card.price, card.title)}>
                 Purchase
               </button>
-            </div>
+            </Item>
           ))
         ) : (
           <p>No cards found.</p>
@@ -73,4 +84,3 @@ const Cards = () => {
 };
 
 export default Cards;
-

@@ -13,7 +13,7 @@ const Services = () => {
         <div className="subject-row">
           <div className="card">
         <img src={Card} alt="#" />
-        <h3>Points Service</h3>
+        <h3>Card Service</h3>
         <a href="/cards">
         <button className="buy-button">Purchase</button>
         </a>
@@ -21,14 +21,14 @@ const Services = () => {
           <div className="card">
         <img src={Point} alt="#" />
         <h3>Points Service</h3>
-        <a href="/cards">
+        <a href="/points">
         <button className="buy-button">Purchase</button>
         </a>
       </div>
           <div className="card">
         <img src={Roll} alt="#" />
-        <h3>Points Service</h3>
-        <a href="/cards">
+        <h3>Roll Service</h3>
+        <a href="/rolls">
         <button className="buy-button">Purchase</button>
         </a>
       </div>

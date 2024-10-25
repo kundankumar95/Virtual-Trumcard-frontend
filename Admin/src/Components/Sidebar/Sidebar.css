@@ -1,0 +1,50 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding-top: 30px;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    background: #ffffff; /* White background for clarity */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: width 0.3s; /* Smooth width transition */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px; /* Centered margin */
+    padding: 10px 15px; /* Increased padding for better clickable area */
+    border-radius: 6px;
+    background: #f6f6f6; /* Light background for item */
+    color: #333; /* Dark text for contrast */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s, transform 0.2s; /* Smooth background and transform transitions */
+}
+
+.sidebar-item:hover {
+    background: #e0e0e0; /* Slightly darker background on hover */
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        padding: 15px 0; /* Reduced padding for mobile */
+        flex-direction: row; /* Horizontal layout for mobile */
+        width: 100%; /* Full width */
+        max-width: none; /* Remove max-width */
+        height: auto; /* Auto height */
+        justify-content: space-around; /* Even spacing for items */
+        overflow-x: auto; /* Horizontal scrolling if items exceed width */
+    }
+    
+    .sidebar-item {
+        margin: 0; /* Reset margin for items */
+        flex: 1; /* Equal width for items */
+        text-align: center; /* Center text for each item */
+    }
+}

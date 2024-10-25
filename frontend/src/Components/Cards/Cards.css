@@ -1,103 +1,117 @@
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px;
-  margin-top: 20px;
+  gap: 20px;
 }
+
+.card-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  flex: 1 1 calc(25% - 20px);
+  transition: transform 0.2s;
+}
+
+.card-item:hover {
+  transform: scale(1.02);
+}
+
+.card-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures aspect ratio is maintained and fills the space */
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.card-price {
+  font-size: 1em;
+  color: #2b8a3a;
+  margin: 10px;
+}
+
+.buy-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+}
+
 .search-form {
-  display: flex; 
+  display: flex;
+  margin-top: 15px;
   justify-content: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .search-bar {
   padding: 10px;
-  width: 300px; 
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-.search-bar:focus {
-  border-color: var(--primary-color); 
-}
-.submit-button {
-  padding: 10px 15px;
-  background-color: var(--primary-color); 
-  color: white;
-  border: none;
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-}
-.submit-button:hover {
-  background-color: var(--secondary-color); 
-}
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; 
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.card h2 {
-  font-size: 1.5rem;
-  color: #73d814;
-  margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 1rem;
-  color: #666; 
-  margin-bottom: 15px;
-}
-.card strong {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-}
-.buy-button {
-  padding: 10px 15px;
-  background-color: var(--primary-color); 
+.submit-button {
+  background-color: #007bff;
   color: white;
+  margin-top: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-left: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; 
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
   text-align: center;
-  font-size: 1rem;
-  font-weight: bold; 
-}
-.buy-button:hover {
-  background-color: var(--secondary-color); 
+  margin: 10px;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px; 
+@media (max-width: 768px) {
+  .card-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }
 
-.card::after {
-  content: "Virtual Tram Card"; 
-  position: absolute; 
-  top: 10px; 
-  left: 10px; 
-  background-color: rgba(255, 255, 255, 0.8); 
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  color: var(--primary-color); 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+@media (max-width: 480px) {
+  .card-item {
+    flex: 1 1 100%;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }
