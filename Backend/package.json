@@ -8,6 +8,7 @@
   "author": "Kundan",
   "license": "ISC",
   "description": "",
+  "github": "https://github.com/kundankumar95/BeingSarangi"
   "dependencies": {
     "@stripe/stripe-js": "^4.8.0",
     "bcryptjs": "^2.4.3",
