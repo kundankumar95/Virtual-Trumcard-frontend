@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+    "github":"https://github.com/kundankumar95/BeingSarangi"
   },
   "dependencies": {
     "react": "^18.3.1",
